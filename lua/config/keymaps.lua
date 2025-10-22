@@ -40,3 +40,8 @@ vim.keymap.set("n", "<leader>rc", "<Cmd>e /c/dev/nvim/init.lua<CR>", { desc = "E
 -- File Explorer
 vim.keymap.set("n", "<leader>m", "<Cmd>NvimTreeFocus<CR>", { desc = "Focus on File Explorer" })
 vim.keymap.set("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })
+
+-- Neogit
+vim.keymap.set("n", "<leader>g", "<Cmd>Neogit<CR>", { desc = "opens Neogit in vsplit" })
+
+

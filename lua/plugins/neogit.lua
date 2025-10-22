@@ -21,4 +21,5 @@ return {
         section = { ">", "▼" },
       },
     })
+  end
 }
