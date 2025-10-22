@@ -17,8 +17,8 @@ return {
       signs = {
         -- { CLOSED, OPENED }
         hunk = { "", "" },
-        item = { ">", "▼" },
-        section = { ">", "▼" },
+        item = { "▶", "▼" },
+        section = { "▶", "▼" },
       },
     })
   end
