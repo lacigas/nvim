@@ -72,7 +72,7 @@ end
 -- Behavior Settings
 vim.opt.errorbells = false -- Disable error sounds
 vim.opt.backspace = "indent,eol,start" -- Make backspace behave naturally
-vim.opt.autochdir = false -- Don't change directory automatically
+vim.opt.autochdir = true -- Don't change directory automatically
 vim.opt.iskeyword:append("-") -- Treat dash as part of a word
 vim.opt.path:append("**") -- Search into subfolders with `gf`
 vim.opt.selection = "inclusive" -- Use inclusive selection
