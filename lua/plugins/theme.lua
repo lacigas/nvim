@@ -13,4 +13,3 @@ return {
 		vim.cmd("colorscheme melange")
 	end,
 }
-

@@ -26,11 +26,11 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
-require("config.options")
 require("config.globals")
+require("config.options")
 require("config.keymaps")
 require("config.autocmds")
+require("neogit").setup {}
 
 local plugins_dir = "plugins"
 
@@ -47,4 +47,3 @@ require("lazy").setup({
 	install = { colorscheme = { "melange" } },
 	checker = { enabled = true },
 })
-

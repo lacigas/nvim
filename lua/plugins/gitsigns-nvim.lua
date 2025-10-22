@@ -1,7 +1,11 @@
 -- ================================================================================================
--- TITLE : globals
--- ABOUT : you may have different global & local leaders
+-- TITLE : gitsigns.nvim
+-- LINKS :
+--   > github : https://github.com/lewis6991/gitsigns.nvim
+-- ABOUT : deep buffer integration for git.
 -- ================================================================================================
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+return {
+	"lewis6991/gitsigns.nvim",
+	opts = {},
+}
