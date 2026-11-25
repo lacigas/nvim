@@ -16,10 +16,14 @@ return {
 			filters = {
 				dotfiles = false, -- Show hidden files (dotfiles)
 			},
-      update_focused_file = {
-        enable = true,
-        update_root = true,
-      },
+			update_focused_file = {
+				enable = true,
+				update_root = true,
+				-- Don't follow (and re-root to) the DirList bookmark buffers in nvim-data
+				exclude = function(event)
+					return vim.api.nvim_buf_get_name(event.buf):match("dirlist%-%d+%.txt$") ~= nil
+				end,
+			},
 
 			view = {
 			},
