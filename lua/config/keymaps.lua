@@ -35,13 +35,21 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent right and reselect" })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 
 -- Quick config editing
-vim.keymap.set("n", "<leader>rc", "<Cmd>e /c/dev/nvim/init.lua<CR>", { desc = "Edit config" })
+vim.keymap.set("n", "<leader>rc", "<Cmd>e ~/AppData/Local/nvim/lua<CR>", { desc = "Edit config" })
 
 -- File Explorer
 vim.keymap.set("n", "<leader>m", "<Cmd>NvimTreeFocus<CR>", { desc = "Focus on File Explorer" })
 vim.keymap.set("n", "<leader>e", "<Cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })
 
--- Neogit
-vim.keymap.set("n", "<leader>g", "<Cmd>Neogit kind=vsplit<CR>", { desc = "opens Neogit in vsplit" })
+local function anchor()
+    return require('anchor')
+end
 
+vim.keymap.set('n', '<leader>aa', function() anchor().add() end, { desc = 'Add a directory to the anchor list' })
+vim.keymap.set('n', '<leader>ad', function() anchor().delete() end, { desc = 'Delete a directory from the anchor list' })
+vim.keymap.set('n', '<leader>al', function() anchor().toggle_list() end, { desc = 'Open anchor list in a floating buffer' })
+vim.keymap.set('n', '<leader>a0', function() anchor().return_to_cwd() end, { desc = 'Return back to cwd' })
+
+vim.keymap.set('n', '<leader>a1', function() anchor().open(1) end, { desc = 'Open fuzzy finder for anchor 1' })
+vim.keymap.set('n', '<leader>a5', function() anchor().open(5) end, { desc = 'Open fuzzy finder for anchor 5' })
 

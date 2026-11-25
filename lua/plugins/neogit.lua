@@ -1,7 +1,6 @@
--- Neogit --
-
 return {
   "NeogitOrg/neogit",
+  lazy = true,
   dependencies = {
     "nvim-lua/plenary.nvim",         -- required
     "sindrets/diffview.nvim",        -- optional - Diff integration
@@ -12,14 +11,8 @@ return {
     "nvim-mini/mini.pick",           -- optional
     "folke/snacks.nvim",             -- optional
   },
-  config = function()
-    require('neogit').setup({
-      signs = {
-        -- { CLOSED, OPENED }
-        hunk = { "", "" },
-        item = { "▶", "▼" },
-    		section = { "▶", "▼" },
-      },
-    })
-  end
+  cmd = "Neogit",
+  keys = {
+    { "<leader>gg", "<cmd>Neogit<cr>", desc = "Show Neogit UI" }
+  }
 }
